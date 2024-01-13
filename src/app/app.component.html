@@ -334,15 +334,16 @@
 
 
 <div>
-  <app-toggle [isOn]="isOn">Uncontrolled</app-toggle>
+  <app-toggle [isOn]="isOn">(Uncontrolled)</app-toggle>
   <p>{{isOn ? 'On' : 'Off'}}</p>
 
 </div>
 <br>
 <br>
 <div>
-  <app-toggle-controlled [isOn]="isOnControlled">Controlled</app-toggle-controlled>
+  <app-toggle-controlled [(isOn)]="isOnControlled">(ONLY this button can update the ON/OFF state)</app-toggle-controlled>
   <p>{{isOnControlled ? 'On' : 'Off'}}</p>
+  <app-toggle-controlled [isOn]="isOnControlled">(Controlled - this button can NOT update the state)</app-toggle-controlled>
 </div>
 
 <router-outlet />
