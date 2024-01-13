@@ -226,7 +226,7 @@
         </defs>
       </svg>
       <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+      <p>Congratulations! Your app is running without <code>Zone.js</code>. 🎉</p>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
@@ -333,8 +333,6 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
-<router-outlet />
-
 <div>
   <app-toggle [isOn]="isOn">Uncontrolled</app-toggle>
   <p>{{isOn ? 'On' : 'Off'}}</p>
@@ -346,3 +344,5 @@
   <app-toggle-controlled [isOn]="isOnControlled">Controlled</app-toggle-controlled>
   <p>{{isOnControlled ? 'On' : 'Off'}}</p>
 </div>
+
+<router-outlet />

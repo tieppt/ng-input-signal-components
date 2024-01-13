@@ -1,11 +1,14 @@
-import { ApplicationConfig, ɵprovideZonelessChangeDetection as provideZonelessChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import {
+  ApplicationConfig,
+  ɵprovideZonelessChangeDetection as provideZonelessChangeDetection,
+} from '@angular/core';
+import { provideRouter, withComponentInputBinding } from '@angular/router';
 
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes),
-    provideZonelessChangeDetection()
-  ]
+    provideRouter(routes, withComponentInputBinding()),
+    provideZonelessChangeDetection(),
+  ],
 };
